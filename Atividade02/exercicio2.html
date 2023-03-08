@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function mostrarRelogio() {
+            let data = new Date();
+            let horas = data.getHours();
+            let minutos = data.getMinutes();
+            let segundos = data.getSeconds();
+            let tempo = `${horas}:${minutos}:${segundos}`;
+
+            let relogio = document.getElementById("relogio");
+            relogio.innerHTML = tempo;
+
+            setTimeout(mostrarRelogio, 1000);
+        }
+
+    </script>
+    <title>Exercicio 2</title>
+</head>
+
+<body onload="mostrarRelogio()">
+    <div id="relogio"></div>
+</body>
+
+</html>
