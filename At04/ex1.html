@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        .formulario{
+            display: block;
+            padding: 0px;
+            width: 600px;
+            font-family: monospace;
+            background-color: bisque;
+        }
+        .row{
+            display: inline-block;
+            width: 100%;
+            padding-left: 5px;
+            padding-bottom: 10px;
+        }
+        .col1{
+            display: inline-block;
+            width: 48%;
+            padding-right: 0px;
+        }
+        .col2{
+            display: inline-block;
+            width: 32%;
+            padding-right: 0px;
+        }
+        .field{
+            max-width: 95%;
+            width: 95%;
+        }
+        #segunda-parte{
+            padding: 0px;
+            margin: 0px;
+        }
+    </style>
+  </head>
+<body>
+    <form id="form" class="formulario" method="post">
+        <h1>Formulário de Cadastro:</h1>
+        <div class="row">
+            <label for="nome">Nome:</label><br>
+            <input class="field" type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+        </div><br>
+        <div class="row">
+            <div class="col1">
+                <label for="email">E-Mail:</label><br>
+                <input class="field" type="text" id="email" name="email" placeholder="fulano.com" required>
+            </div>
+            <div class="col1">
+                <label for="dataNascimento">Data Nascimento:</label><br>
+                <input class="field" type="date" id="dataNascimento" name="dataNascimento" required>
+            </div>
+        </div><br>
+        <div class="row">
+            <div class="col2">
+                <label for="telefoneFixo">Telefone Fixo:</label><br>
+                <input class="field" type="text" id="telefoneFixo" name="telefoneFixo" placeholder="(99)9999-9999" required><br>
+            </div>
+            <div class="col2">
+                <label for="telefoneCelular">Telefone Celular:</label><br>
+                <input class="field" type="text" id="telefoneCelular" name="telefoneCelular" placeholder="(99)99999-9999" required><br>
+            </div>
+            <div class="col2">
+                <label for="professor"></label>
+                <input type="radio" id="professor" name="opcao" onclick="gerarCampos(`professor`)" value="Professor">Professor <br>
+                <label for="aluno"></label>
+                <input type="radio" id="aluno" name="opcao" onclick="gerarCampos(`aluno`)"value ="Aluno">Aluno                
+            </div>
+            <div id="segunda-parte"></div>
+        </div><br><br>
+      <input type="submit" value="Enviar">
+      <input type="reset" value="Redefinir" onclick="gerarCampos(`limpar`)">
+    </form>
+    <script type="text/javascript" src="ex1.js"></script>
+</body>
+</html>

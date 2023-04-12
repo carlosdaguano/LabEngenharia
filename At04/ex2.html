@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ToDo List</title>
+    <style>
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+            display: flex;
+            width: 30%;
+        }
+
+        li span {
+            flex-grow: 1;
+        }
+
+        .btn-group {
+            display: inline-block;
+            flex-direction: row;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>ToDo List</h1>
+    <form id="form">
+        <input type="text" id="inputItem" placeholder="Digite um novo item">
+        <button type="submit">Adicionar</button>
+    </form>
+    <ul id="lista">
+    </ul>
+    <script type="text/javascript" src="ex2.js"></script>
+</body>
+
+</html>
