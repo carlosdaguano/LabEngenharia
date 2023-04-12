@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Carro</title>
+</head>
+
+<body>
+    <form id="formulario" onsubmit="callCarro()">
+        <label>Marca: <input type="text" id="marca" required></label><br>
+        <label>Modelo: <input type="text" id="modelo" required></label><br>
+        <label>Ano: <input type="text" id="ano" required></label><br>
+        <label>Cor: <input type="text" id="cor" required></label><br>
+        <label>Kilometragem: <input type="text" id="kilometragem" required></label><br>
+        <label>Valor Fipe: <input type="text" id="valorFipe" required></label><br>
+        <input type="submit">
+    </form>
+    <p id="anosUtilizacao"></p>
+    <p id="valorMercado"></p>
+
+    <script type="text/javascript" src="ex2.js">
+    </script>
+    <script>
+        function callCarro(){
+            event.preventDefault();
+            criarCarro();
+        }
+    </script>
+</body>
+
+</html>
